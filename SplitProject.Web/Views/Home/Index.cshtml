@@ -1,0 +1,27 @@
+﻿@model ListingViewModel;
+@using SplitProject.Data;
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+
+        @foreach (Listing list in Model.Listings)
+        {
+            <div class="jumbotron">
+                <h5>Listed on @list.DateCreated</h5>
+                <h5>Phone Number @list.PhoneNumber</h5>
+                <h5>Name @list.Name</h5>
+                <h3>Details:</h3>
+                <p>@list.Text</p>
+
+                @if (Model.Ids != null && Model.Ids.Contains(list.Id))
+                {
+                    <form method="post" action="/Home/Delete">
+                        <input type="hidden" name="id" value="@list.Id" />
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                }
+
+            </div>
+        }
+    </div>
+</div>>

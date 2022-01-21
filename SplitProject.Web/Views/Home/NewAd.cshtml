@@ -1,0 +1,29 @@
+﻿
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>New Ad (Session)</h2>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3 jumbotron">
+                <form method="post" action="/home/NewAd">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input name="Name" type="text" placeholder="Name" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                            <input name="PhoneNumber" type="text" placeholder="* Phone Number" class="form-control" />
+                        </div>
+                    </div>
+                    <br />
+                    <textarea name="text" class="form-control" rows="10" placeholder="* Description"></textarea>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
